@@ -1,0 +1,19 @@
+{
+  "name": "cli-file-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ed9n/CLI-File-Manager.git"
+  },
+  "author": "Eduard Rzhautski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ed9n/CLI-File-Manager/issues"
+  },
+  "homepage": "https://github.com/ed9n/CLI-File-Manager#readme"
+}
