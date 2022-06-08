@@ -26,13 +26,13 @@ export const exitApp = (name) => {
 
     rl.on('line', (input) => {
         if (input == '.exit') {
-            console.log(`Thank you for using File Manager! ${name} `)
+            console.log(`Thank you for using File Manager! ${name}`);
             rl.close();
         }
     });
 
     rl.on('SIGINT', () => {
-        console.log(`Thank you for using File Manager! ${name}`)
+        console.log(`Thank you for using File Manager! ${name}`);
         rl.close();
     });
-}
+};
