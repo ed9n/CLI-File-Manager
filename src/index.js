@@ -1,23 +1,25 @@
 import { getArgs } from './GetArguments/getArgs.js';
 import { getName } from './GetUserName/getUserName.js';
-import { getPuth } from './Puth/getPuth.js';
-import { exitApp, up, validateForStartsArg } from './ValidateArgs/validateArgs.js';
+import { validateMainArgs } from './Validate CLI-Args/validateMainArgs.js';
+import { homedir } from 'os';
+import { validateForStartsArgs } from './Validate CLI-Args/validateForStartsArgs.js';
+import { exitApp } from './Validate CLI-Args/validateForExitApp.js';
+
 
 const initCliApp = () => {
 
     const args = getArgs(process.argv);
 
-    if (validateForStartsArg(args)) {
+    if (validateForStartsArgs(args)) {
 
-        const url = import.meta.url;
         const name = getName(args);
-        const path = getPuth(url);
+        const path = homedir();
 
         console.log(`Welcome to the File Manager, ${name}!`);
         console.log(`You are currently in ${path}`);
 
         exitApp(name);
-        up(url);
+        validateMainArgs(path);
     };
 };
 
